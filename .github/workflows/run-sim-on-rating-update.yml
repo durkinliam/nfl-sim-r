@@ -1,49 +1,46 @@
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
-    with:
-      token: ${{ secrets.GITHUB_TOKEN }} 
+on:
+  push:
+    branches: 
+      - main
+    paths: 
+      - 'team_ratings.csv'
 
-  - name: Setup R Environment
-    uses: r-lib/actions/setup-r@v2
-    with:
-      r-version: 4.5.1
+jobs:
+  import-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+          with:
+            r-version: 4.5.1
 
-  - name: Install System Dependencies for R packages
-    uses: r-lib/actions/setup-r-dependencies@v2
-    with:
-      packages: |
-        nflseedR
-        nflreadr
-        dplyr
-        jsonlite
-        knitr
+      - name: Install packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            nflseedR
+            nflreadR
+            dplyr
+            jsonlite
+            knitr
 
-  - name: Run NFL Simulation Script
-    run: |
-      if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-        SEASON="${{ github.event.inputs.season }}"
-        SIMS="${{ github.event.inputs.simulations }}"
-        CHUNKS="${{ github.event.inputs.chunks }}"
-        RATINGS_FILE="${{ github.event.inputs.ratings_file }}"
-      else
-        SEASON="2025"
-        SIMS="1000"
-        CHUNKS="10"
-        RATINGS_FILE="teams_rating.csv"
-      fi
+      - name: Check out repository
+        uses: actions/checkout@v3
 
-      echo "Running R Script with: $SEASON, $SIMS, $CHUNKS, $RATINGS_FILE"
-      Rscript runSim.R $SEASON $SIMS $CHUNKS $RATINGS_FILE
+      - name: Run sim script
+        run: |
+          SEASON="2025"
+          SIMS="1000"
+          CHUNKS="10"
+          RATINGS_FILE="teams_rating.csv"
+          
+          Rscript -e 'source("run-sim-script.R")'
 
-  - name: Commit and Push output.json
-    run: |
-      # Configure Git credentials
-      git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      git config --local user.name "github-actions[bot]"
-      
-      git add output.json
-      
-      git commit -m "🤖 [Automated] Update simulation results!" || echo "No changes to commit"
-      
-      git push
+      - name: Commit results
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          
+          git add output.json
+          git commit -m 'Updated simulation output.' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
