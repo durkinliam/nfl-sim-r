@@ -43,5 +43,4 @@ jobs:
 
           git add output.json
           git commit -m 'Updated simulation output.' || echo "No changes to commit"
-          # The 'git push' command needs the branch name specified, especially in a script context
           git push origin HEAD || echo "No changes to commit"
