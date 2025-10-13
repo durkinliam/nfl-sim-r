@@ -6,7 +6,7 @@ on:
       - 'team_ratings.csv'
 
 jobs:
-  import-data:
+  run-simulation:
     runs-on: ubuntu-latest
     steps:
       - name: Set up R
@@ -18,8 +18,8 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
-            nflseedR
-            nflreadR
+            nflverse/nflseedR
+            nflverse/nflreadR
             dplyr
             jsonlite
             knitr
