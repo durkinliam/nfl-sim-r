@@ -17,10 +17,10 @@ runSim <- function(currentSeason, noOfSims, noOfChunks, ratings_input_file_path)
       dplyr::select(-seed1, -draft1, -draft5) |>
       dplyr::arrange(division, -div1) |>
       dplyr::mutate(
-        playoff = 1/playoff,
-        div1 = 1/div1,
-        won_conf = 1/won_conf,
-        won_sb = 1/won_sb
+        playoff = round(1/playoff, digits = 2),
+        div1 = round(1/div1, digits = 2),
+        won_conf = round(1/won_conf, digits = 2),
+        won_sb = round(1/won_sb, digits = 2)
         ) |>
       dplyr::rename(make_playoffs = playoff, win_div = div1, win_conf = won_conf, win_sb = won_sb)
   
