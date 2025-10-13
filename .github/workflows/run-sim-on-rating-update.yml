@@ -1,8 +1,8 @@
 on:
   push:
-    branches: 
+    branches:
       - main
-    paths: 
+    paths:
       - 'team_ratings.csv'
 
 jobs:
@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
-          with:
-            r-version: 4.5.1
+        with:
+          r-version: 4.5.1
 
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
@@ -33,14 +33,14 @@ jobs:
           SIMS="1000"
           CHUNKS="10"
           RATINGS_FILE="teams_rating.csv"
-          
+
           Rscript -e 'source("run-sim-script.R")'
 
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          
+
           git add output.json
           git commit -m 'Updated simulation output.' || echo "No changes to commit"
-          git push origin || echo "No changes to commit"
+          git push origin HEAD || echo "No changes to commit"
