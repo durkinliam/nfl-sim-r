@@ -33,7 +33,7 @@ jobs:
           SEASON="2025"
           SIMS="100000"
           CHUNKS="100"
-          RATINGS_FILE="team_rating.csv"
+          RATINGS_FILE="team_ratings.csv"
 
           Rscript -e 'source("run-sim-script.R")'
 
