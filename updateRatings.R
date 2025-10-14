@@ -10,5 +10,5 @@ updateRatings <- function() {
       team = dplyr::case_when(team == "LAR" ~ "LA", team == "OAK" ~ "LV", TRUE ~ team)
     )
   
-  write.csv(ratings, "./team_ratings.csv", row.names = FALSE)
+  write.csv(ratings, "./new_team_ratings.csv", row.names = FALSE)
 }
