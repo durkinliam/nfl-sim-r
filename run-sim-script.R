@@ -16,6 +16,25 @@ runSim <- function(currentSeason,
     verbosity = "NONE"
   )
   
+  simmed_games_output <- sims$game_summary |>
+    dplyr::filter(week >= nflreadr::get_current_week()) |>
+    dplyr::select(
+      week,
+      home = home_team,
+      away = away_team,
+      spread = result,
+      home_win = home_percentage,
+      away_win = away_percentage
+    ) |>
+    dplyr::mutate(
+      spread = round(spread * -1, digits = 2),
+      home_win = round(1 / home_win, digits = 2),
+      away_win = round(1 / away_win, digits = 2)
+    ) |>
+    dplyr::group_by(week) |>
+    tidyr::nest() |>
+    jsonlite::toJSON(pretty = TRUE)
+  
   arranged_output <- sims$overall |>
     dplyr::select(-seed1, -draft1, -draft5) |>
     dplyr::arrange(division, -div1) |>
@@ -32,10 +51,10 @@ runSim <- function(currentSeason,
       win_sb = won_sb
     )
   
-  output_as_json <- jsonlite::toJSON(arranged_output)
+  outright_output_as_json <- jsonlite::toJSON(arranged_output, pretty = TRUE)
   
-  write(output_as_json, "./output.json")
-  
+  write(simmed_games_output, "./simmed_games_output.json")
+  write(outright_output_as_json, "./outright_output.json")
   
   print(arranged_output |> knitr::kable())
 }
