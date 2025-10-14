@@ -31,9 +31,9 @@ jobs:
       - name: Run sim script
         run: |
           SEASON="2025"
-          SIMS="1000"
-          CHUNKS="10"
-          RATINGS_FILE="teams_rating.csv"
+          SIMS="100000"
+          CHUNKS="100"
+          RATINGS_FILE="team_rating.csv"
 
           Rscript -e 'source("run-sim-script.R")'
 
