@@ -4,7 +4,7 @@ updateRatings <- function() {
   )
   
   ratings <- nfeloRatings |>
-    dplyr::select(team, rating = nfelo_base) |>
+    dplyr::select(team, rating = nfelo) |>
     dplyr::mutate(
       rating = round(rating),
       team = dplyr::case_when(team == "LAR" ~ "LA", team == "OAK" ~ "LV", TRUE ~ team)
