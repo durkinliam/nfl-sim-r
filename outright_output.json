@@ -2,321 +2,321 @@
   {
     "conf": "AFC",
     "division": "AFC East",
-    "team": "BUF",
-    "wins": 10.9013,
-    "make_playoffs": 1.21,
-    "win_div": 2,
-    "win_conf": 6.95,
-    "win_sb": 13.82
+    "team": "NE",
+    "wins": 10.816,
+    "make_playoffs": 1.25,
+    "win_div": 2.01,
+    "win_conf": 13.9,
+    "win_sb": 33.61
   },
   {
     "conf": "AFC",
     "division": "AFC East",
-    "team": "NE",
-    "wins": 10.814,
-    "make_playoffs": 1.24,
-    "win_div": 2.02,
-    "win_conf": 13.82,
-    "win_sb": 33.75
+    "team": "BUF",
+    "wins": 10.8972,
+    "make_playoffs": 1.22,
+    "win_div": 2.01,
+    "win_conf": 6.96,
+    "win_sb": 14
   },
   {
     "conf": "AFC",
     "division": "AFC East",
     "team": "MIA",
-    "wins": 4.7703,
-    "make_playoffs": 73.96,
-    "win_div": 366.3,
-    "win_conf": 1250,
-    "win_sb": 3571.43
+    "wins": 4.7693,
+    "make_playoffs": 82.64,
+    "win_div": 361.01,
+    "win_conf": 1694.92,
+    "win_sb": 4166.67
   },
   {
     "conf": "AFC",
     "division": "AFC East",
     "team": "NYJ",
-    "wins": 3.5355,
-    "make_playoffs": 224.22,
-    "win_div": 787.4,
-    "win_conf": 4166.67,
-    "win_sb": 12500
+    "wins": 3.5502,
+    "make_playoffs": 234.74,
+    "win_div": 819.67,
+    "win_conf": 3571.43,
+    "win_sb": 8333.33
   },
   {
     "conf": "AFC",
     "division": "AFC North",
     "team": "PIT",
-    "wins": 9.4522,
-    "make_playoffs": 1.59,
-    "win_div": 1.99,
-    "win_conf": 13.89,
-    "win_sb": 30.77
+    "wins": 9.4235,
+    "make_playoffs": 1.63,
+    "win_div": 2.01,
+    "win_conf": 14.26,
+    "win_sb": 32.03
   },
   {
     "conf": "AFC",
     "division": "AFC North",
     "team": "BAL",
-    "wins": 7.9906,
+    "wins": 8.0219,
     "make_playoffs": 2.51,
-    "win_div": 3.2,
-    "win_conf": 15.29,
-    "win_sb": 29.83
+    "win_div": 3.13,
+    "win_conf": 16.13,
+    "win_sb": 31.92
   },
   {
     "conf": "AFC",
     "division": "AFC North",
     "team": "CIN",
-    "wins": 7.2625,
-    "make_playoffs": 4.22,
-    "win_div": 6.86,
-    "win_conf": 86.13,
-    "win_sb": 232.02
+    "wins": 7.2565,
+    "make_playoffs": 4.37,
+    "win_div": 6.94,
+    "win_conf": 87.64,
+    "win_sb": 219.3
   },
   {
     "conf": "AFC",
     "division": "AFC North",
     "team": "CLE",
-    "wins": 6.2111,
-    "make_playoffs": 12.03,
-    "win_div": 25.29,
-    "win_conf": 218.34,
-    "win_sb": 625
+    "wins": 6.2014,
+    "make_playoffs": 12.8,
+    "win_div": 25.39,
+    "win_conf": 257.73,
+    "win_sb": 729.93
   },
   {
     "conf": "AFC",
     "division": "AFC South",
     "team": "IND",
-    "wins": 11.785,
+    "wins": 11.7782,
     "make_playoffs": 1.09,
     "win_div": 1.38,
-    "win_conf": 6,
-    "win_sb": 13.05
+    "win_conf": 6.07,
+    "win_sb": 13.1
   },
   {
     "conf": "AFC",
     "division": "AFC South",
     "team": "JAX",
-    "wins": 9.1877,
-    "make_playoffs": 1.84,
-    "win_div": 5.08,
-    "win_conf": 25.09,
-    "win_sb": 61.39
+    "wins": 9.1581,
+    "make_playoffs": 1.91,
+    "win_div": 5.12,
+    "win_conf": 26.3,
+    "win_sb": 66.53
   },
   {
     "conf": "AFC",
     "division": "AFC South",
     "team": "HOU",
-    "wins": 7.714,
-    "make_playoffs": 3.15,
-    "win_div": 12.65,
-    "win_conf": 24.65,
-    "win_sb": 52.27
+    "wins": 7.6822,
+    "make_playoffs": 3.33,
+    "win_div": 12.42,
+    "win_conf": 25.97,
+    "win_sb": 53.28
   },
   {
     "conf": "AFC",
     "division": "AFC South",
     "team": "TEN",
-    "wins": 3.7782,
-    "make_playoffs": 232.02,
-    "win_div": 1492.54,
-    "win_conf": 5882.35,
-    "win_sb": 25000
+    "wins": 3.7536,
+    "make_playoffs": 294.12,
+    "win_div": 1785.71,
+    "win_conf": 6250,
+    "win_sb": 33333.33
   },
   {
     "conf": "AFC",
     "division": "AFC West",
     "team": "KC",
-    "wins": 10.7081,
-    "make_playoffs": 1.24,
-    "win_div": 2.23,
-    "win_conf": 4.73,
-    "win_sb": 8.56
+    "wins": 10.6903,
+    "make_playoffs": 1.25,
+    "win_div": 2.47,
+    "win_conf": 4.88,
+    "win_sb": 8.71
   },
   {
     "conf": "AFC",
     "division": "AFC West",
     "team": "DEN",
-    "wins": 10.4751,
-    "make_playoffs": 1.35,
-    "win_div": 2.96,
-    "win_conf": 10.08,
-    "win_sb": 21.2
+    "wins": 10.451,
+    "make_playoffs": 1.38,
+    "win_div": 3.3,
+    "win_conf": 10.65,
+    "win_sb": 22.74
   },
   {
     "conf": "AFC",
     "division": "AFC West",
     "team": "LAC",
-    "wins": 9.3747,
-    "make_playoffs": 1.61,
-    "win_div": 4.77,
-    "win_conf": 14.53,
-    "win_sb": 32.82
+    "wins": 10.0865,
+    "make_playoffs": 1.35,
+    "win_div": 3.48,
+    "win_conf": 10.64,
+    "win_sb": 22.33
   },
   {
     "conf": "AFC",
     "division": "AFC West",
     "team": "LV",
-    "wins": 5.4267,
-    "make_playoffs": 24.05,
-    "win_div": 207.04,
-    "win_conf": 389.11,
-    "win_sb": 1020.41
+    "wins": 5.4009,
+    "make_playoffs": 26.13,
+    "win_div": 259.74,
+    "win_conf": 456.62,
+    "win_sb": 1086.96
   },
   {
     "conf": "NFC",
     "division": "NFC East",
     "team": "PHI",
-    "wins": 11.0695,
-    "make_playoffs": 1.19,
-    "win_div": 1.32,
-    "win_conf": 7.08,
-    "win_sb": 13.76
+    "wins": 11.0354,
+    "make_playoffs": 1.2,
+    "win_div": 1.33,
+    "win_conf": 7.01,
+    "win_sb": 13.52
   },
   {
     "conf": "NFC",
     "division": "NFC East",
     "team": "DAL",
-    "wins": 8.4193,
-    "make_playoffs": 3.48,
-    "win_div": 6.39,
-    "win_conf": 35.15,
-    "win_sb": 73.75
+    "wins": 8.4114,
+    "make_playoffs": 3.43,
+    "win_div": 6.37,
+    "win_conf": 34.48,
+    "win_sb": 71.17
   },
   {
     "conf": "NFC",
     "division": "NFC East",
     "team": "WAS",
-    "wins": 6.8632,
-    "make_playoffs": 10.16,
-    "win_div": 15.17,
-    "win_conf": 131.23,
-    "win_sb": 273.22
+    "wins": 6.8982,
+    "make_playoffs": 9.59,
+    "win_div": 14.29,
+    "win_conf": 126.74,
+    "win_sb": 278.55
   },
   {
     "conf": "NFC",
     "division": "NFC East",
     "team": "NYG",
-    "wins": 5.9283,
-    "make_playoffs": 19.9,
-    "win_div": 44.37,
-    "win_conf": 307.69,
-    "win_sb": 763.36
+    "wins": 5.9601,
+    "make_playoffs": 19.32,
+    "win_div": 43.18,
+    "win_conf": 251.26,
+    "win_sb": 591.72
   },
   {
     "conf": "NFC",
     "division": "NFC North",
     "team": "DET",
-    "wins": 11.3428,
-    "make_playoffs": 1.23,
-    "win_div": 2.26,
-    "win_conf": 5.32,
-    "win_sb": 9.54
+    "wins": 11.4054,
+    "make_playoffs": 1.21,
+    "win_div": 2.18,
+    "win_conf": 5.29,
+    "win_sb": 9.45
   },
   {
     "conf": "NFC",
     "division": "NFC North",
     "team": "GB",
-    "wins": 11.2488,
-    "make_playoffs": 1.27,
-    "win_div": 2.33,
-    "win_conf": 6.34,
-    "win_sb": 11.5
+    "wins": 11.3129,
+    "make_playoffs": 1.24,
+    "win_div": 2.28,
+    "win_conf": 6.11,
+    "win_sb": 11.13
   },
   {
     "conf": "NFC",
     "division": "NFC North",
     "team": "CHI",
-    "wins": 8.7531,
-    "make_playoffs": 3.16,
-    "win_div": 13.96,
-    "win_conf": 39.43,
-    "win_sb": 88.03
+    "wins": 8.7692,
+    "make_playoffs": 3.03,
+    "win_div": 13.33,
+    "win_conf": 38.71,
+    "win_sb": 87.87
   },
   {
     "conf": "NFC",
     "division": "NFC North",
     "team": "MIN",
-    "wins": 7.8574,
-    "make_playoffs": 4.94,
-    "win_div": 17.37,
-    "win_conf": 42.5,
-    "win_sb": 85.25
+    "wins": 7.1064,
+    "make_playoffs": 8.61,
+    "win_div": 35.8,
+    "win_conf": 83.26,
+    "win_sb": 166.39
   },
   {
     "conf": "NFC",
     "division": "NFC South",
     "team": "TB",
-    "wins": 10.7338,
-    "make_playoffs": 1.29,
+    "wins": 10.731,
+    "make_playoffs": 1.28,
     "win_div": 1.46,
-    "win_conf": 15.53,
-    "win_sb": 34.67
+    "win_conf": 15.44,
+    "win_sb": 35.45
   },
   {
     "conf": "NFC",
     "division": "NFC South",
     "team": "ATL",
-    "wins": 8.8873,
-    "make_playoffs": 2.69,
+    "wins": 8.888,
+    "make_playoffs": 2.68,
     "win_div": 5.36,
-    "win_conf": 33.24,
-    "win_sb": 70.72
+    "win_conf": 34.25,
+    "win_sb": 74.02
   },
   {
     "conf": "NFC",
     "division": "NFC South",
     "team": "CAR",
-    "wins": 7.5812,
-    "make_playoffs": 5.29,
-    "win_div": 8.84,
-    "win_conf": 133.87,
-    "win_sb": 337.84
+    "wins": 7.5731,
+    "make_playoffs": 5.26,
+    "win_div": 8.93,
+    "win_conf": 134.59,
+    "win_sb": 369
   },
   {
     "conf": "NFC",
     "division": "NFC South",
     "team": "NO",
-    "wins": 4.9178,
-    "make_playoffs": 50.08,
-    "win_div": 59.52,
-    "win_conf": 1149.43,
-    "win_sb": 2500
+    "wins": 4.9232,
+    "make_playoffs": 48.64,
+    "win_div": 58.86,
+    "win_conf": 1136.36,
+    "win_sb": 2777.78
   },
   {
     "conf": "NFC",
     "division": "NFC West",
     "team": "LA",
-    "wins": 11.4367,
-    "make_playoffs": 1.26,
-    "win_div": 2.32,
+    "wins": 11.4393,
+    "make_playoffs": 1.25,
+    "win_div": 2.33,
     "win_conf": 6.1,
-    "win_sb": 11.32
+    "win_sb": 11.23
   },
   {
     "conf": "NFC",
     "division": "NFC West",
     "team": "SEA",
-    "wins": 10.85,
-    "make_playoffs": 1.43,
+    "wins": 10.862,
+    "make_playoffs": 1.41,
     "win_div": 3.46,
-    "win_conf": 11.01,
-    "win_sb": 21.64
+    "win_conf": 10.97,
+    "win_sb": 22.38
   },
   {
     "conf": "NFC",
     "division": "NFC West",
     "team": "SF",
-    "wins": 10.4934,
-    "make_playoffs": 1.42,
-    "win_div": 3.65,
-    "win_conf": 16.03,
-    "win_sb": 34.88
+    "wins": 10.5121,
+    "make_playoffs": 1.41,
+    "win_div": 3.63,
+    "win_conf": 15.9,
+    "win_sb": 36.1
   },
   {
     "conf": "NFC",
     "division": "NFC West",
     "team": "ARI",
-    "wins": 6.2305,
-    "make_playoffs": 18.04,
-    "win_div": 144.51,
-    "win_conf": 198.02,
-    "win_sb": 406.5
+    "wins": 6.2356,
+    "make_playoffs": 17.17,
+    "win_div": 149.7,
+    "win_conf": 179.21,
+    "win_sb": 361.01
   }
 ]
