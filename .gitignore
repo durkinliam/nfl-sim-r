@@ -6,3 +6,4 @@
 .RDataTmp
 new_team_ratings.csv
 updateRatings.R
+.idea/*
