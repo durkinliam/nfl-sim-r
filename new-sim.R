@@ -1,21 +1,27 @@
+source("convert-odds.R")
+source("create-upcoming-schedule-with-raw-probabilities.R")
+source("compute-simulation-results.R")
+
 args <- commandArgs(trailingOnly = TRUE)
 
-runSim <- function(currentSeason,
-                   noOfSims,
-                   noOfChunks,
-                   ratings_input_file_path) {
+runSim_2 <- function(currentSeason,
+                     noOfSims,
+                     noOfChunks,
+                     ratings_input_file_path) {
   ratings_df <- read.csv(ratings_input_file_path)
   ratings_named_vector <- setNames(ratings_df[[2]], ratings_df[[1]])
-  
+
   games <- nflreadr::load_schedules(currentSeason) |> dplyr::filter(game_type == "REG")
-  
+
   sims <- nflseedR::nfl_simulations(
     games = games,
     chunks = noOfChunks,
     simulations = noOfSims,
     elo = ratings_named_vector,
     sim_include = "POST",
-    verbosity = "NONE"
+    verbosity = "NONE",
+    compute_results = computeSimulationResults,
+    upcoming_schedule = createUpcomingScheduleWithProbabilities()
   )
   
   simmed_games_output <- sims$game_summary |>
@@ -29,9 +35,7 @@ runSim <- function(currentSeason,
       away_win = away_percentage
     ) |>
     dplyr::mutate(
-      spread = round(spread * -1, digits = 2),
-      home_win = round(1 / home_win, digits = 2),
-      away_win = round(1 / away_win, digits = 2)
+      spread = round(spread * -1, digits = 2)
     ) |>
     dplyr::group_by(week) |>
     tidyr::nest() |>
@@ -55,13 +59,13 @@ runSim <- function(currentSeason,
   
   outright_output_as_json <- jsonlite::toJSON(arranged_output, pretty = TRUE)
   
-  write(simmed_games_output, "./simmed_games_output.json")
-  write(outright_output_as_json, "./outright_output.json")
+  write(simmed_games_output, "./simmed_games_output_new.json")
+  write(outright_output_as_json, "./outright_output_new.json")
   
   print(arranged_output |> knitr::kable())
 }
 
-runSim(as.numeric(args[1]),
-       as.numeric(args[2]),
-       as.numeric(args[3]),
-       args[4])
+runSim_2(as.numeric(args[1]),
+         as.numeric(args[2]),
+         as.numeric(args[3]),
+         args[4])
