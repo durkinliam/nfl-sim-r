@@ -85,17 +85,19 @@ computeSimulationResults <- function(teams, games, week_num, ...) {
   games[list(week_num), elo_diff := home_elo - away_elo + (home_rest - away_rest) / 7 * 25, on = "week"]
   games[list(week_num, "Home"), elo_diff := elo_diff + homeFieldAdvantage, on = c("week", "location")]
   games[list(week_num, c("WC", "DIV", "CON", "SB")), elo_diff := elo_diff * 1.2, on = c("week", "game_type")]
-
+  
   games[list(week_num), `:=`(
-    wp = data.table::fifelse(!is.na(home_prob) & !is.na(away_prob), home_prob, 1 / (10^(-elo_diff / 400) + 1)),
+    wp = data.table::fifelse(!is.na(home_prob) &
+                               !is.na(away_prob), home_prob, 1 / (10^(-elo_diff / 400) + 1)),
     estimate = data.table::fifelse(
       !is.na(home_prob) & !is.na(away_prob),
       (home_prob - away_prob) * 25,
       elo_diff / 25
     )
   ), on = "week"]
-
-  games[list(week_num) == week & is.na(result), result := round_out(rnorm(.N, estimate, 13))]
+  
+  games[list(week_num) == week &
+          is.na(result), result := round_out(rnorm(.N, estimate, 13))]
   games[list(week_num), `:=`(
     outcome = data.table::fcase(is.na(result), NA_real_, result > 0, 1, result < 0, 0, default = 0.5),
     elo_input = data.table::fcase(
@@ -103,8 +105,7 @@ computeSimulationResults <- function(teams, games, week_num, ...) {
       NA_real_,
       result > 0,
       elo_diff * 0.001 + 2.2,
-      result < 0,
-      -elo_diff * 0.001 + 2.2,
+      result < 0,-elo_diff * 0.001 + 2.2,
       default = 1.0
     )
   ), on = "week"]
