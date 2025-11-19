@@ -6,7 +6,7 @@ source("update-ratings.R")
 args <- commandArgs(trailingOnly = TRUE)
 
 runSim <- function(currentSeason, noOfSims, noOfChunks) {
-  ratings_df <- read.csv("./team_ratings.csv")
+  ratings_df <- updateRatings()
   ratings_named_vector <- setNames(ratings_df[[2]], ratings_df[[1]])
   
   games <- nflreadr::load_schedules(currentSeason) |> dplyr::filter(game_type == "REG")
