@@ -1,6 +1,6 @@
 # NFL Season Simulation
 
-Simulation logic using R to simulate the current NFL season.
+Simulation logic, leveraging the brilliant [nflseedR](https://nflseedr.com/) package, using R to simulate the current NFL season.
 
 ```
 Rscript run-sim.R (season_year) (number of simulation iterations) (number of chunks)
