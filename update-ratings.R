@@ -7,9 +7,8 @@ updateRatings <- function() {
     dplyr::select(team, rating = nfelo_base) |>
     dplyr::mutate(
       rating = round(rating),
-      team = dplyr::case_when(team == "LAR" ~ "LA", team == "OAK" ~ "LV", TRUE ~ team),
-      pts_v_avg = (rating - 1500) / 25
+      team = dplyr::case_when(team == "LAR" ~ "LA", team == "OAK" ~ "LV", TRUE ~ team)
     )
   
-  write.csv(ratings, "./team_ratings.csv", row.names = FALSE)
+  return(ratings)
 }
