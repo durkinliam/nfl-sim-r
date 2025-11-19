@@ -2,6 +2,8 @@
 
 Simulation logic, leveraging the brilliant [nflseedR](https://nflseedr.com/) package, using R to simulate the current NFL season.
 
+Where there is a public betting line available for upcoming games, the simulation logic will use real life betting lines for that game to inform the win probabilities. If there is no betting line available, ELO rating based probabilites are used.
+
 ```
 Rscript run-sim.R (season_year) (number of simulation iterations) (number of chunks)
 ```
